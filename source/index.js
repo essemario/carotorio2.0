@@ -72,3 +72,31 @@ function setConfig(){
     alert("ERRO AO CONFIGURAR O CONTRATO!!");
   }
 }
+
+function setCasamento() {
+  address = $("#set-address").val();
+  c1_cpf = $("#set-c1_cpf").val();
+  c1_json = $("#set-c1_json").val();
+  c2_cpf = $("#set-c2_cpf").val();
+  c2_json = $("#set-c2_json").val();
+  regime = $("#set-regime").val();
+  nomes = $("#set-alterarNomes").val();
+
+  contract.methods.setCasamento(address, c1_cpf, c1_json, c2_cpf, c2_json, regime, nomes).send({from:account}).then( function(tx) { 
+    console.log("Transaction: ", tx); 
+  });
+}
+
+function getCasamento() {
+  address = $("#show-address").val();
+  contract.methods.getCasamento(address).call({from:account}).then(function (resultado) {
+    
+    var date = new Date((parseInt(resultado[4] * 1000)));
+    
+    document.getElementById('show-c1_json').innerHTML = resultado[0];
+    document.getElementById('show-c2_json').innerHTML = resultado[1];
+    document.getElementById('show-regime').innerHTML = resultado[2];
+    document.getElementById('show-data').innerHTML = resultado[3];
+    document.getElementById('show-timestamp').innerHTML = date.toLocaleString('pt-BR', { year: 'numeric', month: '2-digit', day: '2-digit' });    
+  });   
+}

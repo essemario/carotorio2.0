@@ -17,7 +17,6 @@
   <body class="container">
     <h2><a href="index.html">VOLTAR</a></h2>
     <h1 class="page-header">REGISTRO DE CASAMENTOS</h1>
-
     <div class="row">
         <div>
           <h3 class="sub-header">ENDEREÇO DO CONTRATO</h3>
@@ -35,11 +34,10 @@
         </div>
     </div>
 
-
     <div class="row">
       <div>
         <h3 class="sub-header">Registrar casamento</h3>
-        <form class="form-group" role="form" id="form-set-proclame">
+        <form class="form-group" role="form" id="form-set-casamento">
           <div class="form-group">
             <table>
               <tr>
@@ -47,31 +45,39 @@
                 <td><input class="form-control" id="set-address"></td>
               </tr>
               <tr>
-                <td><label for="set-n1_cpf">CPF Nubente 1:</label> </td>
-                <td><input class="form-control" id="set-n1_cpf"></td>
+                <td><label for="set-c1_cpf">CPF Conjuge 1:</label> </td>
+                <td><input class="form-control" id="set-c1_cpf"></td>
               </tr>
               <tr>
-                <td><label for="set-n1_json">JSON Nubente 1:</label> </td>
-                <td><input class="form-control" id="set-n1_json"></td>
+                <td><label for="set-c1_json">JSON Conjuge 1:</label> </td>
+                <td><input class="form-control" id="set-c1_json"></td>
               </tr>
               <tr>
-                <td><label for="n2_cpf">CPF Nubente 2:</label> </td>
-                <td><input class="form-control" id="set-n2_cpf"></td>
+                <td><label for="set-c2_cpf">CPF Conjuge 2:</label> </td>
+                <td><input class="form-control" id="set-c2_cpf"></td>
               </tr>
               <tr>
-                <td><label for="n2_json">JSON Nubente 2:</label> </td>
-                <td><input class="form-control" id="set-n2_json"></td>
+                <td><label for="set-c2_json">JSON Conjuge 2:</label> </td>
+                <td><input class="form-control" id="set-c2_json"></td>
               </tr>
+              <tr>
+                <td><label for="set-regime">Regime de bens</label> </td>
+                <td><textarea  class="form-control" name="set-regime" id="set-regime" cols="30" rows="10"></textarea></td>
+              </tr>
+              <tr>
+                  <td><label for="set-alterarNomes">Alterações de nomes</label> </td>
+                  <td><textarea  class="form-control" name="set-alterarNomes" id="set-alterarNomes" cols="30" rows="10"></textarea></td>
+                </tr>
             </table>
           </div>
-          <a href="#" onclick="setProclama()" class="btn btn-primary">PUBLICAR PROCLAMES</a>
+          <a href="#" onclick="setCasamento()" class="btn btn-primary">PUBLICAR CASAMENTO</a>
         </form>
       </div>
     </div>    
 
     <div class="row">
       <div>
-        <h3 class="sub-header">EXIBIR PROCLAMAS</h3>
+        <h3 class="sub-header">CONSULTAR CASAMENTO</h3>
         <form class="form-group" role="form" id="form-get-proclame">
               <div class="form-group">
               <table>
@@ -80,52 +86,27 @@
                     <td><input class="form-control" id="show-address"></td>
                   </tr>
                   <tr>
-                  <td>JSON Nubente 1:</td>
-                  <td>
-                    <label id="show-n1_json">
+                    <td>JSON Conjuge 1:</td><td>
+                    <label id="show-c1_json">
                   </td>                          
                 </tr>
                 <tr>
-                    <td>JSON Nubente 2:</td>
-                    <td>
-                      <label id="show-n2_json">
-                    </td>                          
-                  </tr>
-                  <tr>
-                      <td>Timestamp publicação:</td>
-                      <td>
-                        <label id="show-timestamp">
-                      </td>                          
-                    </tr>
+                  <td>JSON Conjuge 2:</td>
+                  <td><label id="show-c2_json"></td>                          
+                </tr>
+                <tr>
+                  <td>Regime de bens:</td>
+                  <td><label id="show-regime"></td>                          
+                </tr>
+                <tr>
+                  <td>Data de registro:</td>
+                  <td><label id="show-data"></td>
+                </tr>
               </table>
-          </div>                
-          <a href="#" onclick="getProclame()" class="btn btn-primary">LER PROCLAME</a>
+          </div>
+          <a href="#" onclick="getCasamento()" class="btn btn-primary">VER CERTIDÃO</a>
         </form>
       </div>
     </div>
-
-    <div class="row">
-        <div>
-          <h3 class="sub-header">CONFERIR PROCLAMAS</h3>
-          <form class="form-group" role="form" id="form-check-proclame">
-                <div class="form-group">
-                <table>
-                    <tr>
-                      <td><label for="check-address">Endereço do publicante:</label> </td>
-                      <td><input class="form-control" id="check-address"></td>
-                    </tr>
-                    <tr>
-                    <td>Proclamas concluidas?</td>
-                    <td>
-                      <label id="check-proclameIsConcluded">
-                    </td>                          
-                  </tr>
-                </table>
-            </div>                
-            <a href="#" onclick="getStatus()" class="btn btn-primary">LER PROCLAMAS</a>
-          </form>
-        </div>
-      </div>
-
   </body>
 </html>
