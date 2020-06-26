@@ -13,7 +13,7 @@ var contractAddress;// = '0xDF49440ab93e8143ea656d690e5dB939a66569E4';
 var abi; //JSON.parse( '[{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"n1_cpf","type":"string"},{"name":"n1_json","type":"string"},{"name":"n2_cpf","type":"string"},{"name":"n2_json","type":"string"}],"name":"setProclama","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getProclamas","outputs":[{"name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getProclama","outputs":[{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"proclamaIsConcluded","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"listaDeProclamas","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]' );
 var account; 
 
-contract;// = new web3.eth.Contract(abi, contractAddress);
+contract = "";// = new web3.eth.Contract(abi, contractAddress);
 
 web3.eth.getAccounts(function(err, accounts) {
   if (err != null) {
