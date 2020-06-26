@@ -17,3 +17,31 @@ body{
 .sub-header{
     font-size: 18px;
 }
+
+.btn-primary{
+    color: #86D0CB;
+    background-color: white;
+    border-color: #86D0CB;
+    border-radius: 20px;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #86D0CB;
+    border-color: white;
+}
+
+.importante{
+    color: white;
+    font-weight: bold;
+    background-color: #86D0CB;
+    border-color: #86D0CB;
+    box-shadow: #68bfb7 0 6px 20px -8px;
+    border-radius: 20px;
+}
+
+.importante:hover{
+    background-color: #68bfb7;
+    border-color: #68bfb7;
+    color: white;
+}
