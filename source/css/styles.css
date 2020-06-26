@@ -5,9 +5,15 @@ a {
 h1 {
     color: #E2645A;
     font-family: 'Merriweather', serif;
+    font-size: 42px;
 }
 
 body{
     color: #585858;
     font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+.sub-header{
+    font-size: 18px;
 }
