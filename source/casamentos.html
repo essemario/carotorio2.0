@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Registro de Casamentos</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./index.js"></script>   
+    <script>
+        $( document ).ready(function() {
+          abi = JSON.parse( '[{"constant":false,"inputs":[{"name":"_address","type":"address"},{"name":"c1_cpf","type":"string"},{"name":"c1_json","type":"string"},{"name":"c2_cpf","type":"string"},{"name":"c2_json","type":"string"},{"name":"regimeDeBens","type":"string"},{"name":"alteracoesDeNome","type":"string"}],"name":"setCasamento","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_address","type":"address"}],"name":"getCasamento","outputs":[{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCasamentos","outputs":[{"name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"listaDeCasamentos","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]' );
+          setConfig();
+        });
+        </script> 
+  </head>
+
+  <body class="container">
+    <h2><a href="index.html">VOLTAR</a></h2>
+    <h1 class="page-header">REGISTRO DE CASAMENTOS</h1>
+
+    <div class="row">
+        <div>
+          <h3 class="sub-header">ENDEREÇO DO CONTRATO</h3>
+          <form class="form-group" role="form" id="form-set-contrato">
+            <div class="form-group">
+              <table>
+                <tr>
+                  <td><label for="contract-address">Endereço do contrato:</label> </td>
+                  <td><input class="form-control" id="contract-address" value="0x085b1F1470307Bf35171755d5d813d6B9Ea321be"></td>
+                </tr>
+              </table>
+            </div>
+            <a href="#" onclick="setContrato()" class="btn btn-primary">SALVAR ENDEREÇO</a>
+          </form>
+        </div>
+    </div>
+
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">Registrar casamento</h3>
+        <form class="form-group" role="form" id="form-set-proclame">
+          <div class="form-group">
+            <table>
+              <tr>
+                <td><label for="set-address">Endereço do publicante:</label> </td>
+                <td><input class="form-control" id="set-address"></td>
+              </tr>
+              <tr>
+                <td><label for="set-n1_cpf">CPF Nubente 1:</label> </td>
+                <td><input class="form-control" id="set-n1_cpf"></td>
+              </tr>
+              <tr>
+                <td><label for="set-n1_json">JSON Nubente 1:</label> </td>
+                <td><input class="form-control" id="set-n1_json"></td>
+              </tr>
+              <tr>
+                <td><label for="n2_cpf">CPF Nubente 2:</label> </td>
+                <td><input class="form-control" id="set-n2_cpf"></td>
+              </tr>
+              <tr>
+                <td><label for="n2_json">JSON Nubente 2:</label> </td>
+                <td><input class="form-control" id="set-n2_json"></td>
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="setProclama()" class="btn btn-primary">PUBLICAR PROCLAMES</a>
+        </form>
+      </div>
+    </div>    
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">EXIBIR PROCLAMAS</h3>
+        <form class="form-group" role="form" id="form-get-proclame">
+              <div class="form-group">
+              <table>
+                  <tr>
+                    <td><label for="show-address">Endereço do publicante:</label> </td>
+                    <td><input class="form-control" id="show-address"></td>
+                  </tr>
+                  <tr>
+                  <td>JSON Nubente 1:</td>
+                  <td>
+                    <label id="show-n1_json">
+                  </td>                          
+                </tr>
+                <tr>
+                    <td>JSON Nubente 2:</td>
+                    <td>
+                      <label id="show-n2_json">
+                    </td>                          
+                  </tr>
+                  <tr>
+                      <td>Timestamp publicação:</td>
+                      <td>
+                        <label id="show-timestamp">
+                      </td>                          
+                    </tr>
+              </table>
+          </div>                
+          <a href="#" onclick="getProclame()" class="btn btn-primary">LER PROCLAME</a>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+        <div>
+          <h3 class="sub-header">CONFERIR PROCLAMAS</h3>
+          <form class="form-group" role="form" id="form-check-proclame">
+                <div class="form-group">
+                <table>
+                    <tr>
+                      <td><label for="check-address">Endereço do publicante:</label> </td>
+                      <td><input class="form-control" id="check-address"></td>
+                    </tr>
+                    <tr>
+                    <td>Proclamas concluidas?</td>
+                    <td>
+                      <label id="check-proclameIsConcluded">
+                    </td>                          
+                  </tr>
+                </table>
+            </div>                
+            <a href="#" onclick="getStatus()" class="btn btn-primary">LER PROCLAMAS</a>
+          </form>
+        </div>
+      </div>
+
+  </body>
+</html>

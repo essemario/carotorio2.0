@@ -1,0 +1,34 @@
+Ropsten
+Endereço do contrato: 0xDF49440ab93e8143ea656d690e5dB939a66569E4
+https://ropsten.etherscan.io/address/0xdf49440ab93e8143ea656d690e5db939a66569e4
+
+
+Exemplos
+Proclama de exemplo: 0x241f55932c6978d4a61c887472280dde80e75a16
+Proclama de exemplo: 0x241f55932c6978d4a61c887472280dde80e75a14
+
+
+NUBENTE 1
+{
+  "nome": "Fulano de tal completo",
+  "EstadoCivil": "Solteiro",
+  "DataNascimento": "10/12/1989",
+  "NomeDoPai": "Sr. Fulano de Tal Primeiro",
+  "NomeDaMae": "Sra. Fulana A Primeira",
+  "Naturalidade": "Brasil, São Paulo, Piracicaba",
+  "Naturalidade": "Brasil, São Paulo, São Paulo",
+  "tokenEcpf": "0xF7dA8A7BD5848140a2e79B20446e6a544af1fF4A"
+}
+
+
+NUBENTE 2
+{
+  "nome": "Ciclana del pinho",
+  "EstadoCivil": "Solteira",
+  "DataNascimento": "04/01/1985",
+  "NomeDoPai": "Sr. Ciclanão Mal fal",
+  "NomeDaMae": "Sra. Ciriclanina Lopes",
+  "Naturalidade": "Brasil, São Paulo, Ribeirão Preto",
+  "Naturalidade": "Brasil, São Paulo, São Paulo",
+  "tokenEcpf": "0xF7dA8A7BD5848140a2e79B20446e6a544654sad"
+}
