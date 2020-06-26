@@ -52,3 +52,15 @@ body{
     border-color: #68bfb7;
     color: white;
 }
+
+.center{
+    margin-top: 40vh;
+}
+
+.botao-index1{
+    margin-right: 5vw;
+}
+
+.botao-index2{
+    margin-left: 5vw;
+}
