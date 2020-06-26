@@ -1,5 +1,12 @@
 a {
     color: #86D0CB;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+a:hover{
+    color: #68bfb7;
+    font-weight: normal;
 }
 
 h1 {
